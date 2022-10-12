@@ -5,3 +5,7 @@
 .white {
     color: aliceblue;
 }
+
+.bg-white{
+    background-color: aliceblue;
+}
