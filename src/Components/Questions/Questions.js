@@ -33,7 +33,7 @@ const Question = ({ ques }) => {
                     <h3>{newQues}</h3>
 
                     <div className='que-icon' onClick={() => seeTheAns(correctAnswer)}>
-                        <EyeIcon className='' />
+                        <EyeIcon style={{width:'80px', height:'50px'}} />
                     </div>
                 </div>
 
