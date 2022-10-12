@@ -1,0 +1,31 @@
+.question-container {
+    margin : 20px auto;
+    padding : 20px;
+    background-color: rgb(236, 230, 230);
+    box-shadow: 10px 2px 2px rgb(92, 135, 172);
+    border-radius: 5px;
+    width: 60%;
+}
+
+.ico{
+    font-size: 20px;
+}
+
+.que{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.que h3{
+    margin: 0;
+}
+
+.que-icon {
+    display: flex;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    cursor: pointer;
+}

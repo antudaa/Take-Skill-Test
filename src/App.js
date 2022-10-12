@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import Topics from './Components/Topics/Topics';
 import Error from './Components/Error/Error';
 import Statistics from './Components/Statistics/Statistics';
+import Quiz from './Components/Quiz/Quiz';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
       children: [
         {
           path: '/',
+          loader : async() => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Home></Home> 
         },
         {
@@ -24,6 +28,13 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Topics></Topics>
+        },
+        {
+          path: '/quiz/:id',
+          loader: async({params}) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
+          element:<Quiz></Quiz>
         },
         {
           path: '/blog',

@@ -1,5 +1,6 @@
 import React from 'react';
-import './Cart.css'
+import './Cart.css';
+import {Link} from 'react-router-dom';
 
 const Cart = (props) => {
     const { topic } = props;
@@ -14,7 +15,7 @@ const Cart = (props) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title white my-3">{topic.name}</h2>
                     <div className="card-actions">
-                        <button className="btn btn-outline btn-success">Start Quiz</button>
+                        <Link to={`/quiz/${topic.id}`}><button className="btn btn-outline btn-success">Start Quiz</button></Link>
                     </div>
                 </div>
             </div>

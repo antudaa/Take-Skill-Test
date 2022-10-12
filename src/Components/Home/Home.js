@@ -1,10 +1,13 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Topics from '../Topics/Topics';
 import img from './../Images/Quiz Image.jpg';
 import './Home.css'
+import { useLoaderData } from 'react-router-dom'
+import Cart from '../Cart/Cart';
 
 const Home = () => {
+
+    const topic = useLoaderData();
+
     return (
         <div>
             <div className='grid grid-cols lg:grid-cols-2  my-16'>
@@ -19,7 +22,11 @@ const Home = () => {
                     <img className='rounded-xl' src={img} alt="Something Went Wrong ! Path Not Fond." />
                 </div>
             </div>
-          
+            <div className='flex gap-5 my-12 flex-wrap'>
+            {
+                topic.data.map(topic => <Cart key={topic.id} topic={topic}></Cart>)
+            }
+            </div>
         </div>
 
     );
