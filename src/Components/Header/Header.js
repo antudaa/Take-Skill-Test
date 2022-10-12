@@ -11,9 +11,10 @@ const Header = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="white text-md menu menu-horizontal p-0">
-                        <li><Link className=' lg:mr-6' to='/'>Home</Link></li>
-                        <li><Link className=' lg:mr-6' to='/topics'>Topics</Link></li>
-                        <li><Link className=' lg:mr-6' to='/blog'>Blog</Link></li>
+                        <li><Link className=' lg:mr-6 hover:text-orange-300' to='/'>Home</Link></li>
+                        <li><Link className=' lg:mr-6 hover:text-orange-300' to='/topics'>Topics</Link></li>
+                        <li><Link className='lg:mr-6 hover:text-orange-300' to='/statistics'>Statistics</Link></li>
+                        <li><Link className=' lg:mr-6 hover:text-orange-300' to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
             </div>

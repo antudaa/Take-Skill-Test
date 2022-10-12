@@ -4,6 +4,7 @@ import Main from './Layouts/Main';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 import Topics from './Components/Topics/Topics';
+import Error from './Components/Error/Error';
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
           element: <Blog></Blog>
         },
       ]
+    },
+    {
+      path:'*',
+      element:<Error></Error>
     }
   ])
   return (
