@@ -5,6 +5,7 @@ import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 import Topics from './Components/Topics/Topics';
 import Error from './Components/Error/Error';
+import Statistics from './Components/Statistics/Statistics';
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
           path: '/blog',
           element: <Blog></Blog>
         },
+        {
+          path: '/statistics',
+          element: <Statistics></Statistics>
+        }
       ]
     },
     {

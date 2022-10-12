@@ -10,7 +10,7 @@ const Header = () => {
                     <h1 className="btn btn-ghost normal-case text-3xl white">Take Skill Test</h1>
                 </div>
                 <div className="flex-none">
-                    <ul className="white text-md menu menu-horizontal p-0">
+                    <ul className="white text-md menu menu-vertical md:menu-horizontal lg:menu-horizontal p-0">
                         <li><Link className=' lg:mr-6 hover:text-orange-300' to='/'>Home</Link></li>
                         <li><Link className=' lg:mr-6 hover:text-orange-300' to='/topics'>Topics</Link></li>
                         <li><Link className='lg:mr-6 hover:text-orange-300' to='/statistics'>Statistics</Link></li>
