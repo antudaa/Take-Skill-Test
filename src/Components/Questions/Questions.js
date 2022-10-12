@@ -1,8 +1,8 @@
 import React from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import './Question.css'
-import Option from  '../Options/Option';
-import {ToastContainer, toast} from 'react-toastify';
+import Option from '../Options/Option';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Question = ({ ques }) => {
@@ -23,7 +23,7 @@ const Question = ({ ques }) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
     }
 
     return (
@@ -33,7 +33,7 @@ const Question = ({ ques }) => {
                     <h3>{newQues}</h3>
 
                     <div className='que-icon' onClick={() => seeTheAns(correctAnswer)}>
-                        <EyeIcon style={{width:'80px', height:'50px'}} />
+                        <EyeIcon style={{ width: '80px', height: '50px' }} />
                     </div>
                 </div>
 

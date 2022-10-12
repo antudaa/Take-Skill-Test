@@ -1,5 +1,5 @@
 import './App.css';
-import { createBrowserRouter , RouterProvider} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layouts/Main';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
@@ -17,24 +17,24 @@ function App() {
       children: [
         {
           path: '/',
-          loader : async() => {
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
-          element: <Home></Home> 
+          element: <Home></Home>
         },
         {
           path: '/topics',
-          loader : async() => {
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Topics></Topics>
         },
         {
           path: '/quiz/:id',
-          loader: async({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
           },
-          element:<Quiz></Quiz>
+          element: <Quiz></Quiz>
         },
         {
           path: '/blog',
@@ -42,7 +42,7 @@ function App() {
         },
         {
           path: '/statistics',
-          loader : async () => {
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Statistics></Statistics>
@@ -50,8 +50,8 @@ function App() {
       ]
     },
     {
-      path:'*',
-      element:<Error></Error>
+      path: '*',
+      element: <Error></Error>
     }
   ])
   return (

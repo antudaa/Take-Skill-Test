@@ -1,11 +1,11 @@
 import React from 'react';
-import {useLoaderData} from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import Questions from '../Questions/Questions';
 
 const Quiz = () => {
     const quiz = useLoaderData();
     console.log(quiz)
-    const {questions , name} = quiz.data;
+    const { questions, name } = quiz.data;
 
     return (
         <div className='my-16 text-center'>

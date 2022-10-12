@@ -1,4 +1,4 @@
-.option{
+.option {
     display: grid;
     grid-template-columns: repeat(200px, 1fr);
     gap: 10px;
@@ -17,7 +17,7 @@
     border-radius: 9px;
 }
 
-.option ul:hover{
+.option ul:hover {
     background-color: rgb(88, 150, 205);
     color: aliceblue;
 }
@@ -26,6 +26,6 @@
     background-attachment: fixed;
 }
 
-.wrong{
+.wrong {
     background-color: red;
 }
