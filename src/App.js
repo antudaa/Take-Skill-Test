@@ -1,13 +1,38 @@
 import './App.css';
-import Header from './Components/Header/Header';
+import { createBrowserRouter , RouterProvider} from 'react-router-dom';
+import Main from './Layouts/Main';
+import Blog from './Components/Blog/Blog';
+import Home from './Components/Home/Home';
+import Topics from './Components/Topics/Topics';
+
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <Home></Home> 
+        },
+        {
+          path: '/topics',
+          loader : async() => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Topics></Topics>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
+        },
+      ]
+    }
+  ])
   return (
     <div>
-      <Header></Header>
-      <h1 className="text-5xl text-center font-bold underline">
-        Hello world!
-      </h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

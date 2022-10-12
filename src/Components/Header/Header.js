@@ -1,34 +1,20 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div>
             <div className="navbar bg-base-100 dark-blue shadow-xl">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-3xl white">Take Skill Test</a>
+                    <h1 className="btn btn-ghost normal-case text-3xl white">Take Skill Test</h1>
                 </div>
-                <div className="flex-none gap-2">
-                    {/* <div className="form-control">
-                        <input type="text" placeholder="Search" className="input input-bordered" />
-                    </div> */}
-                    <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img src="https://placeimg.com/80/80/people" />
-                            </div>
-                        </label>
-                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
+                <div className="flex-none">
+                    <ul className="white text-md menu menu-horizontal p-0">
+                        <li><Link className=' lg:mr-6' to='/'>Home</Link></li>
+                        <li><Link className=' lg:mr-6' to='/topics'>Topics</Link></li>
+                        <li><Link className=' lg:mr-6' to='/blog'>Blog</Link></li>
+                    </ul>
                 </div>
             </div>
         </div>
